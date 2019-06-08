@@ -1,0 +1,34 @@
+<wicket:extend>
+	<form wicket:id="form_main">
+		<center>
+		<table>
+			<tr>
+				<td>
+					<input type="submit" wicket:id="button_add" />
+					<select wicket:id="select_point" />
+					<input type="submit" wicket:id="button_edit" />
+					<input type="submit" wicket:id="button_remove" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span wicket:id="form_error" class="error_text" />
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<input type="submit" wicket:id="button_enter" style="width:100%"/>
+				</td>
+			</tr>
+		</table>
+		</center>
+	</form>
+	<hr width="250px" style="margin-top:15px; margin-bottom:15px;"/>
+	<form wicket:id="user_form">
+		<div align="center" ><input type="submit" wicket:id="user_button" /></div>
+	</form>
+	<hr width="250px" style="margin-top:15px; margin-bottom:15px;"/>
+	<form wicket:id="assortment_form">
+		<div align="center" ><input type="submit" wicket:id="assortment_button" /></div>
+	</form>
+</wicket:extend>	 

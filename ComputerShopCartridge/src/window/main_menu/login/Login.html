@@ -1,0 +1,36 @@
+<wicket:extend>
+	<div align="center">
+		<form wicket:id="form_main">
+			<table>
+				<tr>
+					<td>
+						<wicket:message key="login" />
+					</td>
+					<td>
+						<input wicket:id="edit_login" 
+						       type="text" /> 
+					</td>				
+				</tr>
+				<tr>
+					<td>
+						<wicket:message key="password" />
+					</td>
+					<td>
+						<input type="password" 
+							   wicket:id="edit_password" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div wicket:id="login_error">
+						</div>
+						<input type="submit" style="width:100%" 
+							   wicket:id="button_enter" />
+						<input type="submit" align="right" 
+							   wicket:id="button_exit" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</wicket:extend>

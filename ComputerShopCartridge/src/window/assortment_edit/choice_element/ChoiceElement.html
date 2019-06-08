@@ -1,0 +1,39 @@
+<wicket:extend>
+	<div align="center">
+		
+		<form wicket:id="form_main">
+			<table>
+				<tr>
+					<th><wicket:message key="label_filter_name" /> </th>
+					<th><wicket:message key="label_filter_bar_code" /> </th>
+					<td rowspan="2">
+						<input type="submit"  wicket:id="button_filter" style="width:100%" />
+					</td>
+				</tr>
+				<tr>
+					<td><input type="text" wicket:id="text_name" /> </td>
+					<td><input type="text" wicket:id="text_bar_code" /> </td>
+				</tr>
+				<tr>
+					<td colspan="3" width="100%" align="center">
+						<div align="center">
+							<input type="checkbox" 
+								   wicket:id="checkbox_filter_assembly" 
+								   style="float:left;" />
+							<span wicket:id="label_filter" style="float:left;" />						
+						</div>
+							
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" width="100%">
+						<input type="submit" wicket:id="button_exit" style="height: 100%; width:100%; " />	
+					</td>
+				</tr>
+			</table>
+		</form>
+		<div align="center">
+			<span wicket:id="panel_result" />
+		</div>
+	</div>
+</wicket:extend>

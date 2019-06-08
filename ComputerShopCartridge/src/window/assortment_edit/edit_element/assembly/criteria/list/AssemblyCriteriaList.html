@@ -1,0 +1,48 @@
+<wicket:head>
+	<script type="text/javascript">
+		function increase(id){
+			var value=document.getElementById(id).getAttribute("size");
+			value++;
+			document.getElementById(id).setAttribute("size",value);
+		}
+		
+		function decrease(id){
+			var value=document.getElementById(id).getAttribute("size");
+			value--;
+			document.getElementById(id).setAttribute("size",value);
+		}
+	</script>
+</wicket:head>
+<wicket:panel>
+<form wicket:id="form_main">
+	<table style="width:100%;">
+		<tr>	
+			<td>
+				<input type="button" wicket:id="button_add" />
+			</td>
+			<td>
+				<input type="button" wicket:id="button_remove" />
+			</td>
+		</tr>
+		<tr>	
+			<td style="width:100%;" colspan="2">
+				<table>
+					<tr>
+						<td>
+							<span wicket:id="select_wrap" >
+								<select wicket:id="select"></select>
+							</span>
+						</td>
+						<td valign="top">
+							<input type="button" value="+" wicket:id="button_increase" />
+							<br />	
+							<input type="button" value="-" wicket:id="button_decrease" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<span wicket:id="modal_window"></span>
+</form>
+</wicket:panel>

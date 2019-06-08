@@ -1,0 +1,41 @@
+<wicket:head>
+</wicket:head>
+<wicket:panel>
+	
+
+	<form wicket:id="form_main">
+		<table width="100%">
+			<tr>
+				<td colspan="2">
+					<span wicket:id="radio_group" >
+						<div style="width:100%">
+							<input type="radio" wicket:id="choice_edit" style="float:left" />
+							<span wicket:id="label_edit" style="float:left" />	 
+						</div>
+						<br>
+						
+						<div style="width:100%">
+							<input type="radio" wicket:id="choice_select" style="float:left" />
+							<span wicket:id="label_select" style="float:left" />
+						</div>
+						<br>
+						
+						<div style="width:100%">
+							<input type="radio" wicket:id="choice_list" style="float:left" />
+							<span wicket:id="label_list" style="float:left" />
+						</div>
+					</span> 	
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" wicket:id="button_ok" />
+				</td>
+				<td>
+					<input type="button" wicket:id="button_cancel" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+</wicket:panel>

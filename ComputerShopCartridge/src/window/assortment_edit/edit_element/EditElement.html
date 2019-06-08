@@ -1,0 +1,80 @@
+<wicket:head>
+	<style type="text/css">
+		.left_border{
+			border-left-color:black;
+			border-left-style: dotted;
+			border-left-width: 1px;
+		}
+	</style>
+</wicket:head>
+<wicket:extend>
+	<div align="center">
+		<table style="border-color:black; border-style: solid; border-width: 1px; ">
+			<tr>
+				<th align="left" ><wicket:message key="label_class"/> </th>
+				<td align="left" ><span wicket:id="caption_class" /> </td>
+				<td rowspan="4" class="left_border"> 	
+					<img width="150px" wicket:id="photo" /> 
+				</td> 
+			</tr>
+			<tr>
+				<th align="left" ><wicket:message key="label_name"/> </th>
+				<td align="left" ><span wicket:id="caption_name" /> </td>
+			</tr>
+			<tr>
+				<th align="left" ><wicket:message key="label_note"/> </th>
+				<td align="left" ><span wicket:id="caption_note" /> </td>
+			</tr>
+			<tr>
+				<th align="left" ><wicket:message key="label_price"/> </th>
+				<td align="left" ><span wicket:id="caption_price" /> </td>
+			</tr>
+			<tr>
+				<th align="left"><wicket:message key="position_state"/></th>
+				<td>
+					<span wicket:id="assembly_state_wrap">
+						<span wicket:id="assembly_state" />
+						<form wicket:id="form_remove" >
+							<input type="button" 
+								   wicket:id="remove_from_assembly">
+						</form>
+					</span>
+				</td>
+				<td class="left_border">
+					<form wicket:id="upload_form">
+						<input type="file" wicket:id="upload_file" />
+						<br>
+						<input type="submit" wicket:id="upload_button" /> 
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<!--  place for edit panel -->
+					<span wicket:id="assembly_panel" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="4" >
+					<form wicket:id="form_back">
+						<input type="submit" wicket:id="button_back" style="width:100%;"/> 
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4"><hr /></td>
+			</tr>
+			<tr>
+				<td colspan="4" >
+					<form wicket:id="form_exit">
+						<input type="submit" wicket:id="button_exit" style="width:100%"/> 
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div wicket:id="modal_window"> </div>
+</wicket:extend>

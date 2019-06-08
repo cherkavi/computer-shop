@@ -1,0 +1,75 @@
+<wicket:panel>
+	<table width="100%" align="center">
+		<tr>
+			<td colspan="2" width="100%">
+				<div style="width:100%" align="center" wicket:id="label_title"> </div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<hr />
+			</td>
+		</tr>
+		<tr>
+			<td align="center" width="100%">
+				<form wicket:id="form_price" style="width:100%" >
+					<table width="100%">
+						<tr>
+							<td  width="33%" align="center"><wicket:message key="name" /></td>
+							<td width="33%" align="center"><wicket:message key="price" /></td>
+							<td width="33%"></td>
+						</tr>
+						<tr>
+							<td width="33%">
+								<div wicket:id="label_edit_model" style="float:left;"></div>
+							</td>
+							<td width="33%" align="center">
+								<input type="text" wicket:id="price" style="float:left;width:40px;" />
+							</td>
+							<td width="33%" rowspan="2" valign="center"> 
+								<input type="button" wicket:id="button_save_price" style="float:left;" />
+							</td>
+						</tr>
+					</table>
+					<div style="width:100%;float:left;" wicket:id="feedback_price"></div>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<hr width="200px;" />
+			</td>
+		</tr>
+		<tr>
+			<td align="center" width="100%">
+				<form wicket:id="form_create">
+					<div style="width:100%;" align="center">
+						<table width="100%">
+							<tr>
+								<td  width="33%" align="center"><wicket:message key="name" /></td>
+								<td width="33%" align="center"><wicket:message key="price" /></td>
+								<td width="33%"></td>
+							</tr>
+							<tr>
+								<td width="33%"><input type="text" wicket:id="edit_create_name"  /></td>
+								<td width="33%"><input type="text" wicket:id="edit_create_price"  style="width:40px;" /></td>
+								<td width="33%" rowspan="2" valign="center"> <input type="button" wicket:id="button_create"/></td>
+							</tr>
+						</table>
+					</div>
+					<div style="width:100%;float:left;" wicket:id="feedback_create"></div>	
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<hr width="200px;" />
+			</td>
+		</tr>
+		<tr>
+			<td width="100%">
+				<input style="width:100%" type="button" wicket:id="button_cancel" />	
+			</td>
+		</tr>
+	</table>
+</wicket:panel>

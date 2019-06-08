@@ -1,0 +1,40 @@
+SET TERM ^ ;
+
+CREATE PROCEDURE GET_CARTRIDGE_BY_CUSTOMER (
+    id_customer integer)
+returns (
+    id_model integer,
+    vendor_name varchar(255),
+    model_name varchar(255))
+as
+begin
+  for
+    select distinct order_list.id_model,
+           cartridge_vendor.name,
+           cartridge_model.name
+    from order_list
+    inner join order_group on order_group.id=order_list.id_order_group
+        inner join customer on customer.id=order_group.id_customer
+                            and customer.id=:id_customer
+    inner join cartridge_model on cartridge_model.id=order_list.id_model
+        inner join cartridge_vendor on cartridge_vendor.id=cartridge_model.id_vendor
+    order by order_list.id desc
+    into :id_model, :vendor_name, :model_name
+   do begin
+      suspend;
+      end
+end^
+
+SET TERM ; ^
+
+GRANT SELECT ON ORDER_LIST TO PROCEDURE GET_CARTRIDGE_BY_CUSTOMER;
+
+GRANT SELECT ON ORDER_GROUP TO PROCEDURE GET_CARTRIDGE_BY_CUSTOMER;
+
+GRANT SELECT ON CUSTOMER TO PROCEDURE GET_CARTRIDGE_BY_CUSTOMER;
+
+GRANT SELECT ON CARTRIDGE_MODEL TO PROCEDURE GET_CARTRIDGE_BY_CUSTOMER;
+
+GRANT SELECT ON CARTRIDGE_VENDOR TO PROCEDURE GET_CARTRIDGE_BY_CUSTOMER;
+
+GRANT EXECUTE ON PROCEDURE GET_CARTRIDGE_BY_CUSTOMER TO SYSDBA;

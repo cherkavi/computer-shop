@@ -1,0 +1,41 @@
+<wicket:head>
+	<style type="text/css">
+		.left_border{
+			border-left-color:black;
+			border-left-style: dotted;
+			border-left-width: 1px;
+		}
+	</style>
+</wicket:head>
+<wicket:panel>
+	<fieldset style="width:100%">
+		<form wicket:id="form_main">
+			<table align="center" style="width:100%">
+				<tr>
+					<td align="right" >
+						<img style="display:none" src="images/ajax-loader.gif" id="ajax_indicator"  height="25"/>
+					</td>
+				</tr>
+				<tr> 
+					<td align="center" >
+						<input type="button" 
+							   wicket:id="button_add_criteria" />
+					</td>
+				</tr>
+				<tr wicket:id="list_of_criteria">
+					<td>
+						<div wicket:id="criteria_element"></div>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<input type="button" 
+							   wicket:id="button_save" 
+							   style="width:100%;"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</fieldset>		
+	<span wicket:id="modal_window_add_criteria"></span>
+</wicket:panel>

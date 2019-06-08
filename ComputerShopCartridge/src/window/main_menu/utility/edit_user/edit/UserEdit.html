@@ -1,0 +1,41 @@
+<wicket:panel>	
+	<form wicket:id="form_main">
+		<table align="center">
+			<tr align="center">
+				<td colspan="2"> <span wicket:id="title" /></td>
+			</tr>
+			<tr colspan="2">
+				<td><hr/></td>
+			</tr>
+			<tr align="center">
+				<td colspan="2">
+					<div>
+						<span wicket:id="edit_name_label" /> 
+					</div>
+					<div>
+						<input type="text" wicket:id="edit_name" />
+					</div>
+				</td> 
+			</tr>
+			<tr>
+				<td><span wicket:id="edit_login_label"></span></td>
+				<td><input type="text" wicket:id="edit_login" /></td>
+			</tr>
+			<tr>
+				<td><span wicket:id="edit_password_label"></span></td>
+				<td><input type="text" wicket:id="edit_password" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center" style="color:red;">
+					<span wicket:id="error_message_container">
+						<span wicket:id="error_message" />
+					</span>
+				</td>
+			</tr>
+			<tr align="center">
+				<td><input type="button" wicket:id="button_save" /></td>
+				<td><input type="button" wicket:id="button_cancel" /></td>
+			</tr>
+		</table>
+	</form>
+</wicket:panel>

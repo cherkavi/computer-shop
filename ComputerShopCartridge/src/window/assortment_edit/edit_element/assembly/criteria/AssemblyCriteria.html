@@ -1,0 +1,28 @@
+<wicket:head>
+	<style type="text/css">
+		.left_border{
+			border-left-color:black;
+			border-left-style: dotted;
+			border-left-width: 1px;
+		}
+	</style>
+</wicket:head>
+<wicket:panel>
+	<div style="width:100%">
+		<fieldset style="float:left; width:80%;">
+			<legend>
+				<span wicket:id="title" />
+			</legend>
+			<span style="float:left" wicket:id="panel_edit_wrap">
+				<div wicket:id="panel_edit"> </div>
+			</span>
+		</fieldset>
+
+		<span style="float:left">
+			<input type="button" 
+				   wicket:id="button_edit_criteria" 
+				   style="float:left; padding-left:10px;"/>
+		</span>
+	
+	</div>
+</wicket:panel>

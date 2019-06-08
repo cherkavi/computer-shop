@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<wicket:extend>
+		<div wicket:id="modal_find_user" />
+		<form wicket:id="form_main" >
+			<center>
+				<table>
+					<tr align="center">
+						<td align="center">
+							<table>
+								<tr>
+									<td>
+										<center>
+											<div wicket:id="caption_surname" />
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div wicket:id="wrap_surname">
+											<input type="text"  wicket:id="textfield_surname" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+						<td rowspan="2" height="100%">
+							<input type="button" 
+								   value="Find User" 
+								   style="display:block; height:100%;"
+								   wicket:id="button_find_user"/>
+						</td>
+					</tr>
+					<tr align="center">
+						<td align="center">
+							<table>
+								<tr>
+									<td>
+										<center>
+											<div wicket:id="caption_name" />
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div wicket:id="wrap_name">
+											<input type="text"  wicket:id="textfield_name" />
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr align="center">
+						<td align="center" colspan="2">
+							<table width="100%">
+								<tr>
+									<td width="100%">
+										<center>
+											<div wicket:id="caption_description" />
+										</center>
+									</td>
+								</tr>
+								<tr>
+									<td width="100%">
+										<input type="text"  wicket:id="textfield_description" style="width: 100%;"/>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" align="center">
+							<span wicket:id="error_message" class="error_text" />
+						</td>
+					</tr>
+					<tr align="center">
+						<td colspan="2" align="center">
+							<table>
+								<tr>
+									<td>
+										<input type="submit" wicket:id="button_create_order" />	
+									</td>
+									<td>
+										<input type="submit" wicket:id="button_cancel" />
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</center>
+		</form>
+		<hr></hr>
+		<div wicket:id="parent_list_order">
+			<table>
+				<tr wicket:id="list_order">
+					<td wicket:id="panel_order"></td>
+				</tr>
+				<tr>
+					<td width="100%">
+						<input type="button" wicket:id="add_element" width="100%"/>
+					</td>
+				</tr>
+			</table>
+		</div>		
+	</wicket:extend>	 
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<wicket:extend>
+			<center>
+			<table>
+				<tr>
+					<td width="100%"> <div wicket:id="panel_detect_group"></div> </td>
+				</tr>
+ 				<tr>
+ 					<td width="100%">
+						<table>
+							<tr>
+			 					<td><a wicket:id="link_receipt"><div wicket:id="caption_receipt"></div></a></td>
+			 					<td></td>
+			 					<td><a wicket:id="link_cheque"><div wicket:id="caption_cheque"></div></a></td>
+							</tr>
+						</table>
+ 					</td>
+ 				</tr>
+ 				<tr align="center">		
+	 				<td width="100%">
+	 					<table>
+	 						<tr>
+	 							<td><div wicket:id="caption_surname"></div></td><td><div wicket:id="value_surname"></div></td>
+	 						</tr>
+	 						<tr>
+	 							<td><div wicket:id="caption_name"></div></td><td><div wicket:id="value_name"></div></td>
+	 						</tr>
+	 						<tr>
+	 							<td><div wicket:id="caption_description"></div></td><td><div wicket:id="value_description"></div></td>
+	 						</tr>
+	 					</table>
+ 					</td>
+				</tr>	
+				<tr>
+					<td width="100%">
+						<table border="1">
+							<tr>
+								<th><div wicket:id="caption_vendor"></div></th>
+								<th><div wicket:id="caption_model"></div></th>
+								<th><div wicket:id="caption_price"></div></th>
+								<th><div wicket:id="caption_barcode"></div></th>
+							</tr>
+							<tr wicket:id="list_order">
+								<td><div wicket:id="value_vendor"></div></td>
+								<td><div wicket:id="value_model"></div></td>
+								<td><div wicket:id="value_price"></div></td>
+								<td><b><a wicket:id="link_print_barcode"><div wicket:id="caption_print_barcode" /></a></b></td>
+							</tr>
+						</table>
+					</td>
+				</tr>	
+				<tr>
+					<td width="100%">
+						<form wicket:id="form_main">
+							<table width="100%">
+								<tr>
+									<td><input type="submit" wicket:id="button_mark" /> </td>
+									<td><input type="submit" wicket:id="button_cancel" /> </td>
+								</tr>
+							</table>
+						</form>
+					</td>
+				</tr>		
+			</table>
+		</center>
+	</wicket:extend>	 
+</body>
+</html>

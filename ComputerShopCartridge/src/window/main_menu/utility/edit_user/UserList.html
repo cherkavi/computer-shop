@@ -1,0 +1,20 @@
+<wicket:extend>
+	<div align="center">
+		<form wicket:id="form_exit">
+			<table>
+				<tr>
+					<td><input type="button" wicket:id="button_add"/></td> 
+					<td> <input type="submit" wicket:id="button_exit" /> </td>
+				</tr>
+			</table>
+		</form>
+		<table wicket:id="user_list_container">
+			<tr wicket:id="user_list">
+				<td><span wicket:id="user_name" /> </td>
+				<td> <input type="button" wicket:id="button_edit" /> </td>
+				<td> <input type="button" wicket:id="button_remove" /> </td>
+			</tr>
+		</table>
+		<div wicket:id="modal_window" />
+	</div>
+</wicket:extend>

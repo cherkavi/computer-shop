@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>ComputerShopCartridge</display-name>
+	<filter>
+        <filter-name>computer_shop_cartridge_application</filter-name>
+        <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+        <init-param>
+          <param-name>applicationClassName</param-name>
+          <param-value>window.Application</param-value>
+        </init-param>
+
+		<!--     
+	 	<init-param>
+	    	  <param-name>configuration</param-name>
+	          <param-value>deployment</param-value>
+		</init-param>
+ 		-->
+	 	<init-param>
+	    	  <param-name>path_to_resource</param-name>
+	          <param-value>http://computerua.com</param-value>
+		</init-param>
+
+	 	<init-param>
+	    	  <param-name>path_to_local_image</param-name>
+	          <param-value>c:\computer_shop_photo\</param-value>
+		</init-param>
+	
+    </filter>
+    <filter-mapping>
+        <filter-name>computer_shop_cartridge_application</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+    	<description></description>
+    	<display-name>Reporter</display-name>
+    	<servlet-name>Reporter</servlet-name>
+    	<servlet-class>report_servlet.Reporter</servlet-class>
+<!--     	<init-param>
+	    	<param-name>reports_dir</param-name>
+	    	<param-value>c:\\temp\\</param-value>
+    	</init-param>
+    	<init-param>
+    		<param-name>reports_pattern_dir</param-name>
+	    	<param-value>c:\\temp_pattern\\</param-value>
+    	</init-param>
+    	<init-param>
+	    	<param-name>report_receipt</param-name>
+	    	<param-value>receipt.jrxml</param-value>
+    	</init-param>
+    	<init-param>
+	    	<param-name>report_barcode</param-name>
+	    	<param-value>barcode.jrxml</param-value>
+    	</init-param>
+ -->    	
+    </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>GetFile</display-name>
+    	<servlet-name>GetFile</servlet-name>
+    	<servlet-class>report_servlet.GetFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>Reporter</servlet-name>
+    	<url-pattern>/Reporter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>GetFile</servlet-name>
+    	<url-pattern>/GetFile</url-pattern>
+    </servlet-mapping>
+</web-app>
