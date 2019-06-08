@@ -1,0 +1,88 @@
+База данных:
+	ASSORTMENT - синхронизирована
+CREATE TABLE ASSORTMENT (
+    KOD               INTEGER NOT NULL,
+    NAME              VARCHAR(150),
+    NOTE              VARCHAR(255),
+    CLASS_KOD         INTEGER,
+    PRICE_KOD         INTEGER,
+    BAR_CODE          VARCHAR(30),
+    DATE_WRITE        TIMESTAMP,
+    BAR_CODE_COMPANY  VARCHAR(30),
+    WARRANTY_MONTH    SMALLINT
+);
+
+	CLASS - синхронизирована
+CREATE TABLE CLASS (
+    KOD         INTEGER NOT NULL,
+    NAME        VARCHAR(255),
+    NOTE        VARCHAR(255),
+    DATE_WRITE  TIMESTAMP
+);
+
+
+	CLIENTS - синхронизирована
+CREATE TABLE CLIENTS (
+    KOD          INTEGER NOT NULL,
+    BAR_CODE     VARCHAR(10),
+    EMAIL        VARCHAR(20),
+    PHONE        VARCHAR(20),
+    PHONE_2      VARCHAR(20),
+    ADDRESS      VARCHAR(75),
+    NAME         VARCHAR(20),
+    SURNAME      VARCHAR(20),
+    FATHER_NAME  VARCHAR(20),
+    NOTE         VARCHAR(75),
+    PERCENT      FLOAT,
+    DATE_WRITE   TIMESTAMP
+);
+
+
+	COURSE - синхронизирована
+CREATE TABLE COURSE (
+    KOD             INTEGER NOT NULL,
+    CURRENCY_VALUE  NUMERIC(15,3),
+    DATE_SET        DATE,
+    DATE_WRITE      TIMESTAMP
+);
+
+
+	PRICE - синхронизирована
+CREATE TABLE PRICE (
+    KOD           INTEGER NOT NULL,
+    PRICE_BUYING  NUMERIC(15,2),
+    PRICE         NUMERIC(15,2),
+    VALID         SMALLINT,
+    NOTE          VARCHAR(255),
+    DATE_WRITE    TIMESTAMP,
+    NEXT_KOD      INTEGER
+);
+
+	
+	QUESTION - таблица заданных вопросов
+CREATE TABLE QUESTION (
+    ID            INTEGER NOT NULL,
+    TEL           VARCHAR(35),
+    EMAIL         VARCHAR(35),
+    MESSAGE_TEXT  VARCHAR(1024),
+    STATE         SMALLINT
+);
+
+
+	COMMODITY - таблица наличия товара на тороговой точке
+		KOD - уникальный номер
+		QUANTITY - колв-во
+		KOD_OPERATION - код операции
+
+CREATE TABLE COMMODITY (
+    ID            INTEGER NOT NULL,
+    kod_ASSORTMENT INTEGER
+    QUANTITY      SMALLINT,
+    KOD_OPERATION SMALLINT
+);
+
+
+	commodity_operation
+		KOD - уникальный код
+		NAME - имя операции
+		

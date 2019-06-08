@@ -1,0 +1,35 @@
+<wicket:head>
+	<style type="text/css">
+		.error_text{
+			color:red;
+		}
+	</style>
+</wicket:head>
+
+<wicket:panel>
+	<form style="width:100%" wicket:id="form_main">
+		<div style="width:100%;float:left;" align="center">
+			<div wicket:id="caption" align="center" style="width:100%;margin-top:10px;margin-bottom:10px;">
+			</div>
+			<div align="center" style="width:100%">
+				<wicket:message key="caption_login" />
+			</div>
+			<div align="center" style="width:100%">
+				<input type="text" wicket:id="login" />
+			</div>
+			<div align="center" style="width:100%">
+				<wicket:message key="caption_password" />
+			</div>
+			<div align="center" style="width:100%">
+				<input type="password" wicket:id="password" />
+			</div>
+			<div align="center" style="width:100%">
+				<div wicket:id="feedback_form" class="error_text" />
+			</div>
+			<div align="center" style="width:100%;margin-top:10px;">
+				<input type="submit" wicket:id="button_ok" style="margin-right:30px;" />
+				<input type="submit" wicket:id="button_cancel"  />
+			</div>
+		</div>
+	</form>
+</wicket:panel>

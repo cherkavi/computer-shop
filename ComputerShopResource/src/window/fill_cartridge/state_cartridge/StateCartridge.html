@@ -1,0 +1,19 @@
+<wicket:extend>
+	<h2>
+		<wicket:message key="caption" />
+	</h2>
+	<form wicket:id="form_main" style="width:100%">
+		<table style="width:300px" align="center">
+			<tr>
+				<td align="right"> <wicket:message key="message_state" /> </td>
+				<td align="left"> <span wicket:id="state" /> </td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" wicket:id="button_ok" style="margin-right:20px;"/>
+					<input type="submit" wicket:id="button_cancel" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</wicket:extend>

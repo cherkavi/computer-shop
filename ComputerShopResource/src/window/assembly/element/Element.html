@@ -1,0 +1,25 @@
+<wicket:panel>
+	<table width="100%" style="border-style:solid;border-color:black; border-width: 1px;">
+		<tr>
+			<td align="right" width="50px"><div wicket:id="label_type" /> </td>
+			<td align="left"><b><div wicket:id="value_type" /> </b> </td>
+		</tr>
+		<tr>
+			<td align="right" width="50px"><div wicket:id="label_name" /></td>
+			<td align="left"><b><div wicket:id="value_name" /></b></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center" width="100%"> 
+				<form wicket:id="form_main" style="display: block;">
+					<nobr>
+						<input type="submit" wicket:id="button_choose" />
+						<span style="width:10px;" > &nbsp; </span>
+						<input type="submit" wicket:id="button_remove" />
+						<span style="width:10px;" > &nbsp; </span>
+						<input type="submit" wicket:id="button_clear" />
+					</nobr>
+				</form>
+			</td>
+		</tr>
+	</table>	
+</wicket:panel>

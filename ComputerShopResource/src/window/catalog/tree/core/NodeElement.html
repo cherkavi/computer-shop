@@ -1,0 +1,14 @@
+<wicket:panel>
+	<div wicket:id="node" class="node_expand">
+		<div wicket:id="node_head" 
+			 class="node_head" 
+			 onclick="checkNode(this.parentNode,this)">
+	    	<div wicket:id="spacer" ></div>
+	      	<div wicket:id="icon" class="icon_expand"></div>
+	      	<div wicket:id="caption" class="node_caption" />
+	    </div>
+	    <div wicket:id="children" class="node_body">
+	    	<div wicket:id="child" />
+	    </div>
+	</div>
+</wicket:panel>

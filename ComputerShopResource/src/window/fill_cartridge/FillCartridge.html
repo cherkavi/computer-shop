@@ -1,0 +1,36 @@
+<wicket:extend>
+	<h2>
+		<wicket:message key="caption" />
+	</h2>
+	<form wicket:id="form_main" style="width:100%">
+		<table style="width:300px" align="center">
+			<tr align="center">
+				<td align="right" style="width:50%">
+					<wicket:message key="caption_order" />
+				</td>
+				<td align="left" style="width:50%">
+					<input type="text" wicket:id="edit_order" size="15" />
+				</td>
+			</tr>
+			<tr align="center">
+				<td align="right">
+					<wicket:message key="caption_control" />
+				</td>
+				<td align="left">
+					<input type="text" wicket:id="edit_control" size="15" />
+				</td>
+			</tr>
+			<tr align="center">
+				<td width="100%" align="center">
+					<div style="color:red" wicket:id="feedback_form" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" wicket:id="button_ok" style="margin-right:20px;"/>
+					<input type="submit" wicket:id="button_cancel" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</wicket:extend>

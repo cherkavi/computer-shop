@@ -1,0 +1,30 @@
+<html>
+<head>
+	<style type="text/css">
+		.link_class{
+			cursor: pointer;
+		}
+		.link_class_mouseover{
+			cursor: pointer;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body >
+	<center>
+		<div align="center" style="width:100%">
+			<wicket:message key="title_select_class" />
+		</div>
+		<div align="center" style="width:100%">
+			<form wicket:id="form_select">
+				<select wicket:id="select_class" />
+			</form>
+		</div>
+		<div align="center" style="width:100%">
+			<hr>
+		</div>
+		<table width="100%" align="center" wicket:id="table_result">
+		</table>		
+	</center>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<wicket:head>
+	<style type="text/css">
+		.error_text{
+			color:red;
+		}
+	</style>
+</wicket:head>
+
+<wicket:panel>
+<form wicket:id="form_main">
+	<table width="100%" align="center">
+		<tr>
+			<td><wicket:message key="input_name" /></td>
+			<td><input type="text" wicket:id="edit_name" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><div class="error_text" wicket:id="feedback_name" /></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="input_address" /></td>
+			<td><input type="text" wicket:id="edit_address" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><div class="error_text" wicket:id="feedback_address" /></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="input_phone" /></td>
+			<td><input type="text" wicket:id="edit_phone" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><div class="error_text" wicket:id="feedback_phone" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><hr/></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="caption_class" /></td>
+			<td> <div wicket:id="class" /></td>
+		</tr>		
+		<tr>
+			<td><wicket:message key="caption_name" /></td>
+			<td> <div wicket:id="name" /></td>
+		</tr>		
+		<tr>
+			<td><wicket:message key="caption_note" /></td>
+			<td> <div wicket:id="note" /></td>
+		</tr>		
+		<tr>
+			<td><wicket:message key="caption_warranty" /></td>
+			<td> <div wicket:id="warranty" /></td>
+		</tr>		
+		<tr>
+			<td><wicket:message key="caption_price_usd" /></td>
+			<td> <div wicket:id="price_usd" /></td>
+		</tr>
+		<tr>
+			<td><wicket:message key="caption_price" /></td>
+			<td> <div wicket:id="price" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" width="100%" align="center">
+				<div style="width:100%">
+					<input type="submit" wicket:id="button_ok" />
+					<input type="submit" wicket:id="button_cancel" />
+				</div>
+			</td>
+		</tr>		
+	</table>
+</form>	
+</wicket:panel>

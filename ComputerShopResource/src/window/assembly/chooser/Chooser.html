@@ -1,0 +1,24 @@
+<wicket:head>
+	<style type="text/css">
+		.link_class{
+			cursor: pointer;
+		}
+		.link_class_mouseover{
+			cursor: pointer;
+			background-color: yellow;
+		}
+	</style>
+</wicket:head>
+<wicket:extend>
+	<div style="float:left; width:100%" align="center">
+		<div wicket:id="label_element"/>
+	</div>
+	<div style="float:left; width:100%" align="center">
+		<form wicket:id="form_main">
+			<input type="submit" wicket:id="button_cancel" />
+		</form>
+	</div>
+	<div style="float:left; width:100%" align="left">
+		<table wicket:id="table"></table>
+	</div> 
+</wicket:extend>

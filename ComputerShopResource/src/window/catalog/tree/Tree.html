@@ -1,0 +1,141 @@
+<wicket:head>
+    <script >
+        function setLeafSelected(idRootNode, elementForSelect){
+            var element=document.getElementById(idRootNode);
+
+            changeClassInNode(element,'leaf_selected','leaf');
+            elementForSelect.className='leaf_selected';
+        }
+        
+        function changeClassInNode(node, findClassName, replaceClassName){
+            if (typeof(node.className)=="undefined"){
+            }else{
+                if(node.className==findClassName){
+                    node.className=replaceClassName;
+                }
+                if(node.hasChildNodes()){
+                    var children = node.childNodes;
+                    for (var i = 0; i < children.length; i++){
+                        changeClassInNode(children[i], findClassName, replaceClassName);
+                    };
+                }
+            }
+        }
+
+
+        function checkNode(element, elementWithIcon){
+            if(element.className=="node_expand"){
+                element.className="node_collapse";
+                element
+                getSecondDiv(elementWithIcon).className="icon_collapse";
+            }else{
+                element.className="node_expand";
+                getSecondDiv(elementWithIcon).className="icon_expand";
+            }
+        }
+
+        function getSecondDiv(element){
+            var children = element.childNodes;
+            var controlValue=0;
+            var returnValue=null;
+            for (var i = 0; i < children.length; i++){
+                if((children[i]!=null)&&(children[i].tagName!=null)){
+                    if(children[i].tagName.toString().toLowerCase()=="div"){
+                        controlValue++;
+                        if(controlValue==2){
+                            returnValue=children[i];
+                        }
+                    }
+                }
+            }
+            return returnValue;
+        }
+    </script>
+
+    <style type="text/css">
+        .node_collapse{
+            cursor:pointer;
+        }
+        .icon_expand{
+            background:url("images/collapse.gif") transparent no-repeat;
+            width:9px;
+            height:9px;
+            display:block;
+            float:left;
+            margin-top:5px;
+            margin-right:2px;
+        }
+        .node_expand{
+            cursor:pointer;
+        }
+        .icon_collapse{
+            background:url("images/expand.gif") transparent no-repeat;
+            display:block;
+            width:9px;
+            height:9px;
+            float:left;
+            margin-top:5px;
+            margin-right:2px;
+        }
+        .node_collapse .node_body{
+            display:none;
+        }
+        .node_expand .node_body{
+        }
+
+		.leaf{
+			/*background-color:white;*/
+		}
+        .leaf a:link{
+        	color:black;
+        	text-decoration:none;
+        }
+        .leaf a:visited{
+        	color:black;
+        	text-decoration:none;
+        }
+        .leaf a:active{
+        	color:black;
+        	text-decoration:none;
+        }
+        .leaf a:hover{
+			text-decoration: none; color: black;
+			font-weight: bold;
+        }
+        
+        .leaf_selected{
+        	color:rgb(255,255,200);
+            background-color:black;
+        }
+        .leaf_selected a:link{
+        	color:rgb(255,255,200);
+        	text-decoration:none;
+        	font-weight: bold;
+        	font-weight: bold;
+        }
+        .leaf_selected a:visited{
+        	color:rgb(255,255,200);
+        	text-decoration:none;
+        	font-weight: bold;
+        }
+        .leaf_selected a:active{
+        	color:rgb(255,255,200);
+        	text-decoration:none;
+        	font-weight: bold;
+        }
+        .leaf_selected a:hover{
+			text-decoration: none; color: red;
+			font-weight: bold;
+			font-weight: bold;
+        }
+        
+        
+        .node_caption{
+        	font-weight: bold;
+        }
+    </style>
+
+</wicket:head>
+<wicket:panel>
+	<div wicket:id="tree" />
+</wicket:panel>
