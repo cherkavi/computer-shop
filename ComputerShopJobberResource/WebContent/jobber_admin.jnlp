@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1251"?>
+    <jnlp
+      spec="1.0+"
+      codebase="http://91.211.119.248/ComputerShopJobberResource"
+      href="jobber_admin.jnlp">
+
+      <information>
+        <title>Админ-Панель</title>
+        <vendor>Виталий (+38 097 920 46 71)</vendor>
+        <description>Программа для управления заказами на сервере</description>
+        <offline-allowed/>
+      </information>
+
+      <security>
+          <all-permissions/>
+      </security>
+
+      <resources>
+        <j2se version="1.6+"/>
+        <jar href="ComputerShopJobberAdmin.jar" />
+      </resources>
+
+      <application-desc main-class="computer_shop.jobber_admin.Main">
+      	<argument>http://91.211.119.248/ComputerShopJobberResource/</argument>
+      </application-desc>
+
+    </jnlp>
+    

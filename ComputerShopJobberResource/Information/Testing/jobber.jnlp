@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1251"?>
+    <jnlp
+      spec="1.0+"
+      codebase="http://localhost:8100/ComputerShopJobberResource"
+      href="jobber.jnlp">
+      <information>
+        <title>Прайс-лист</title>
+        <vendor>Виталий (+38 097 920 46 71)</vendor>
+        <description>Программа для заполнения заказов </description>
+        <offline-allowed/>
+      </information>
+      <security>
+          <all-permissions/>
+      </security>
+      <resources>
+        <j2se version="1.6+"/>
+        <jar href="ComputerShopJobber.jar" />
+      </resources>
+      <application-desc main-class="computer_shop.jobber.Main">
+      	<argument>http://localhost:8100/ComputerShopJobberResource/</argument>
+      </application-desc>
+    </jnlp>
+    

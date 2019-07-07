@@ -1,0 +1,73 @@
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+ 
+  <service>
+    <name>ElementLoader</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.ElementsLoader</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseElementsLoader</implementationClass>
+  </service>  
+
+  <service>
+    <name>LoginValidator</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.LoginValidator</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseLoginValidator</implementationClass>
+  </service>  
+
+  <service>
+    <name>OrderListSave</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.OrderListSave</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseOrderListSave</implementationClass>
+  </service>  
+
+  <service>
+    <name>SectionLoader</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.SectionLoader</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseSectionLoader</implementationClass>
+  </service>  
+
+  <service>
+    <name>CurrencyValue</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.CurrencyValue</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseCurrencyValue</implementationClass>
+  </service>  
+
+  <service>
+    <name>HistoryLoader</name>
+    <namespace>computer_shop_jobber</namespace>
+    <serviceClass>computer_shop.jobber.remote_interface.HistoryLoader</serviceClass>
+    <implementationClass>computer_shop.jobber.remote_implementation.DatabaseHistoryLoader</implementationClass>
+  </service>  
+
+  <service>
+    <name>AdminLoginValidator</name>
+    <namespace>computer_shop_admin</namespace>
+    <serviceClass>computer_shop.jobber.admin_remote_interface.AdminLoginValidator</serviceClass>
+    <implementationClass>computer_shop.jobber.admin_remote_implementation.DatabaseAdminLoginValidator</implementationClass>
+  </service>  
+
+  <service>
+    <name>PriceLoaderManager</name>
+    <namespace>computer_shop_admin</namespace>
+    <serviceClass>computer_shop.jobber.admin_remote_interface.PriceLoaderManager</serviceClass>
+    <implementationClass>computer_shop.jobber.admin_remote_implementation.DatabaseAdminPriceLoaderManager</implementationClass>
+  </service>
+
+  <service>
+    <name>AdminOrders</name>
+    <namespace>computer_shop_admin</namespace>
+    <serviceClass>computer_shop.jobber.admin_remote_interface.AdminOrders</serviceClass>
+    <implementationClass>computer_shop.jobber.admin_remote_implementation.DatabaseAdminOrders</implementationClass>
+  </service>
+
+  <service>
+    <name>IJobberEdit</name>
+    <namespace>computer_shop_admin</namespace>
+    <serviceClass>computer_shop.jobber.admin_remote_interface.IJobberEdit</serviceClass>
+    <implementationClass>computer_shop.jobber.admin_remote_implementation.DatabaseJobberEdit</implementationClass>
+  </service>
+
+</beans>

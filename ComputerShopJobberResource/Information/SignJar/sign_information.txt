@@ -1,0 +1,11 @@
+
+1. Create KeyStore:
+keytool -genkey -keystore VitaliyKeystore -alias Vitaliy
+password: 
+
+2. Check KeyStore
+  keytool -list -keystore VitaliyKeystore
+
+3. Signed
+jarsigner -keystore VitaliyKeystore test.jar Vitaliy
+(password: technik)
